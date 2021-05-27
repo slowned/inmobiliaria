@@ -1,0 +1,22 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "address": "Evergreen 123",
+      "price": 34000,
+      "description": "vecino de flanders"
+    },
+    {
+      "id": 2,
+      "address": "45 Street",
+      "price": 44000,
+      "description": "baño enm suite pa"
+    },
+    {
+      "id": 3,
+      "address": "Calle falsa 4818",
+      "price": 3000,
+      "description": "alta choza"
+    }
+  ]
+}
