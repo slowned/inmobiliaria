@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:8000/",
+  baseURL: "http://my-json-server.typicode.com/slowned/inmobiliaria/",
   withCredentials: false,
   headers: {
     Accept: "application/json",
@@ -12,5 +12,8 @@ const apiClient = axios.create({
 export default {
   getProperties() {
     return apiClient.get("properties/");
+  },
+  getProperty(id) {
+    return apiClient.get("properties/" + id);
   },
 };
