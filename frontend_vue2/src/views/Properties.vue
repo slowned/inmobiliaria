@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <PropertyList v-for="property in properties" :key="property.id" :property="property" />
   </div>
 </template>

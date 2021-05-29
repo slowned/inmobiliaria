@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Properties from "@/views/Properties.vue";
 import PropertyDetail from "@/views/PropertyDetail.vue";
+import Home from "@/views/Home.vue";
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ const routes = [
     name: "PropertyDetail",
     props: true,
     component: PropertyDetail,
+  },
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
   },
 ]
 
