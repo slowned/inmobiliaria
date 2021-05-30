@@ -28,24 +28,24 @@
 
 <script>
 export default {
-  name: "Gallery",
+  name: "Services2",
   data() {
     return {
       items: [
         {
           id: 1,
           title: "Tasaciones",
-          src: require("../assets/images/img1.jpg")
+          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
         },
         {
           id: 2,
           title: "Loteos",
-          src: require("../assets/images/img2.jpg")
+          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
         },
         {
           id: 3,
           title: "Consorcios",
-          src: require("../assets/images/img3.jpg")
+          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
         }
       ],
       transparent: 'rgba(255, 255, 255, 0)',

@@ -1,7 +1,7 @@
 <template>
     <v-container>
       <!-- servicios -->
-      <Service />
+      <Services2 />
       <!-- imagenes chetas -->
       <v-row>
         <v-col>
@@ -52,12 +52,12 @@
 </template>
 
 <script>
-import Service from "@/components/home/Services.vue"
+import Services2 from "@/components/home/Services2.vue"
 
 export default {
   name: 'Home',
   components: {
-    Service,
+    Services2,
   },
   data() {
     return {
