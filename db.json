@@ -4,19 +4,22 @@
       "id": 1,
       "address": "Evergreen 123",
       "price": 34000,
-      "description": "vecino de flanders"
+      "description": "vecino de flanders",
+      "image": "https://picsum.photos/10/6?image=15"
     },
     {
       "id": 2,
       "address": "45 Street",
       "price": 44000,
-      "description": "baño enm suite pa"
+      "description": "baño enm suite pa",
+      "image": "https://picsum.photos/10/6?image=25"
     },
     {
       "id": 3,
       "address": "Calle falsa 4818",
       "price": 3000,
-      "description": "alta choza"
+      "description": "alta choza",
+      "image": "https://picsum.photos/10/6?image=35"
     }
   ]
 }
