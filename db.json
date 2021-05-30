@@ -20,6 +20,69 @@
       "price": 3000,
       "description": "alta choza",
       "image": "https://picsum.photos/10/6?image=35"
+    },
+    {
+      "id": 4,
+      "address": "Evergreen 123",
+      "price": 34000,
+      "description": "vecino de flanders",
+      "image": "https://picsum.photos/10/6?image=15"
+    },
+    {
+      "id": 5,
+      "address": "45 Street",
+      "price": 44000,
+      "description": "baño enm suite pa",
+      "image": "https://picsum.photos/10/6?image=25"
+    },
+    {
+      "id": 6,
+      "address": "Calle falsa 4818",
+      "price": 3000,
+      "description": "alta choza",
+      "image": "https://picsum.photos/10/6?image=35"
+    },
+    {
+      "id": 7,
+      "address": "Evergreen 123",
+      "price": 34000,
+      "description": "vecino de flanders",
+      "image": "https://picsum.photos/10/6?image=15"
+    },
+    {
+      "id": 8,
+      "address": "45 Street",
+      "price": 44000,
+      "description": "baño enm suite pa",
+      "image": "https://picsum.photos/10/6?image=25"
+    },
+    {
+      "id": 9,
+      "address": "Calle falsa 4818",
+      "price": 3000,
+      "description": "alta choza",
+      "image": "https://picsum.photos/10/6?image=35"
+    },
+    {
+      "id": 10,
+      "address": "Evergreen 123",
+      "price": 34000,
+      "description": "vecino de flanders",
+      "image": "https://picsum.photos/10/6?image=15"
+    },
+    {
+      "id": 11,
+      "address": "45 Street",
+      "price": 44000,
+      "description": "baño enm suite pa",
+      "image": "https://picsum.photos/10/6?image=25"
+    },
+    {
+      "id": 12,
+      "address": "Calle falsa 4818",
+      "price": 3000,
+      "description": "alta choza",
+      "image": "https://picsum.photos/10/6?image=35"
     }
   ]
 }
