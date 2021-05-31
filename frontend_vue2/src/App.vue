@@ -1,8 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app
-      src="@/assets/logo.png"
-      color="grey lighten-2"
+      color="grey darken-4"
     >
       <v-toolbar-title>
         <img class="mr-3" src="@/assets/logo.png" height="50"/>
@@ -17,28 +16,19 @@
         <router-link to="#">Nosotros</router-link> |
         <router-link to="#">Contacto</router-link>
       </div>
-
     </v-app-bar>
+
     <v-main>
-
     <!-- Provides the application the proper gutter -->
-    <v-container fluid>
-
       <!-- If using vue-router -->
-      <router-view></router-view>
-      
-      <Footer />
-    </v-container>
-
-
+        <router-view></router-view>
     </v-main>
 
-
+    <Footer />
   </v-app>
 </template>
 
 <script>
-
 import Footer from "@/components/Footer.vue"
 
 export default {

@@ -1,18 +1,33 @@
 <template>
-  <div>
-    <PropertyList v-for="property in properties" :key="property.id" :property="property" />
-  </div>
+  <v-container>
+    <h3> Listado de propiedades </h3>
+    <v-row>
+      <v-col cols="12" md="8">
+        <v-row>
+          <v-col cols="12" md="4" v-for="property in properties" :key="property.id">
+            <PropertyList :property="property" />
+          </v-col>
+        </v-row>
+      </v-col>
+
+      <v-col cols="12" md="4">
+        <h3> Buscar Propiedades en alquiler </h3>
+        <SearchForm />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
 import PropertyList from "@/components/PropertyList.vue";
+import SearchForm from "@/components/SearchForm";
 import PropertyService from "@/services/PropertyService.js";
 
 export default {
   name: "Properties",
   components: {
     PropertyList,
+    SearchForm,
   },
   data() {
     return {

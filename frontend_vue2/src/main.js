@@ -12,3 +12,6 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+
+
+Vue.config.devtools = true

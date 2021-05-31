@@ -1,7 +1,7 @@
 <template>
     <v-container>
       <!-- servicios -->
-      <Service />
+      <Services />
       <!-- imagenes chetas -->
       <v-row>
         <v-col>
@@ -31,11 +31,11 @@
           ></v-img>
         </v-col>
       </v-row>
-
       <!-- nosotros -->
       <v-row>
         <v-col>
           <v-card
+            width="100%"
             color="#385F73"
             dark
           >
@@ -52,18 +52,15 @@
 </template>
 
 <script>
-import Service from "@/components/home/Services.vue"
+import Services from "@/components/home/Services.vue"
 
 export default {
   name: 'Home',
   components: {
-    Service,
+    Services,
   },
-  data() {
-    return {
-      card: "sara",
-    }
-  },
+  data: () => ({
+  }),
 }
 
 </script>

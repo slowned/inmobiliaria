@@ -1,37 +1,62 @@
 <template>
-  <v-footer
-    dark
-    padless
-  >
-    <v-card
-      flat
-      tile
-      class="indigo lighten-1 white--text text-center"
+  <div>
+    <v-spacer> </v-spacer>
+    <v-footer
+      padless
     >
-      <v-card-text>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-4 white--text"
-          icon
-        >
-          <v-icon size="24px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
-      </v-card-text>
+      <v-card
+        flat
+        tile
+        dark
+        class="indigo white--text text-center"
+        color="grey darken-4"
+        width="100%"
+      >
+        <v-card-text>
+          <v-btn
+            v-for="icon in icons"
+            :key="icon"
+            class="mx-4 white--text"
+            icon
+          >
+            <v-icon size="24px">
+              {{ icon }}
+            </v-icon>
+          </v-btn>
+        </v-card-text>
 
-      <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      </v-card-text>
+        <v-container>
+          <v-row>
+            <v-col>
+              <v-avatar size="100">
+                <img
+                  src="https://cdn.vuetifyjs.com/images/john.jpg"
+                  alt="John"
+                >
+              </v-avatar>
+              FIRMA O MATRICULA
+            </v-col>
+            <v-col>
+              <v-avatar size="100">
+                <img
+                  src="https://cdn.vuetifyjs.com/images/john.jpg"
+                  alt="John"
+                >
+              </v-avatar>
+              FIRMA O MATRICULA
+            </v-col>
+          </v-row>
+        </v-container>
 
-      <v-divider></v-divider>
+        <v-divider></v-divider>
 
-      <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-      </v-card-text>
-    </v-card>
-  </v-footer>
+        <v-card-text class="white--text">
+          <span>telefono: 345-129391</span>
+          <span>email: inmo@test.com</span>
+        </v-card-text>
+      </V-CARD>
+    </V-FOOTER>
+    </div>
 </template>
 
 <script>
