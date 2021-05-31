@@ -117,16 +117,16 @@ export default {
     return {
       imgs: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          src: 'https://i.pinimg.com/originals/b6/33/b5/b633b526ec5a84c0313cf553d85bcddf.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src: 'https://www.arkiplus.com/wp-content/uploads/2020/08/dise%C3%B1os-casas-sencillas.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120360227.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: 'https://www.lincolninst.edu/sites/default/files/styles/issue_feature/public/sources/articles/stigma-to-housing-fix-lla180102-highlight-b.jpg?itok=LlOafTaG',
         },
       ],
       itemsPerPage: 1,

@@ -19,7 +19,7 @@
     </v-app-bar>
 
     <v-main>
-    <!-- Provides the application the proper gutter -->
+      <!-- Provides the application the proper gutter -->
       <!-- If using vue-router -->
         <router-view></router-view>
     </v-main>

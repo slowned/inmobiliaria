@@ -51,8 +51,9 @@
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
-          <span>telefono: 345-129391</span>
-          <span>email: inmo@test.com</span>
+          telefono: 345-129391
+          <v-spacer> </v-spacer>
+          email: inmo@test.com
         </v-card-text>
       </V-CARD>
     </V-FOOTER>
