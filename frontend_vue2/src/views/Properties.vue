@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h3> Listado de propiedades </h3>
+    <h2> Propiedades en alquiler </h2>
     <v-row>
       <v-col cols="12" md="8">
         <v-row>
@@ -11,7 +11,7 @@
       </v-col>
 
       <v-col cols="12" md="4">
-        <h3> Buscar Propiedades en alquiler </h3>
+        <h3> Buscar por </h3>
         <SearchForm />
       </v-col>
     </v-row>
