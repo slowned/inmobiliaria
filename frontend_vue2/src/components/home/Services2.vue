@@ -1,6 +1,6 @@
 <template>
   <div class="block galleryBlock">
-    <v-container fluid>
+    <v-container>
       <v-row>
         <v-col v-for="item in items" :key="item.id" class="d-flex child-flex" cols="6" sm="4">
           <v-hover v-slot="{ hover }">
@@ -31,21 +31,25 @@ export default {
   name: "Services2",
   data() {
     return {
+      dialog: false,
       items: [
         {
           id: 1,
           title: "Tasaciones",
-          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
+          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg',
+          description: "Una buena tasación requiere de la correcta aplicación de las distintas técnicas que forman la actividad de tasar una propiedad, por eso queremos informarte que contamos con la formación profesional y académica necesaria para justipreciar un inmueble.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.",
         },
         {
           id: 2,
           title: "Loteos",
-          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
+          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg',
+          description: "Contamos con experiencia dentro de la inmobiliaria para el manejo y administración de venta de tierras a gran escala, con distintas formas de aplicación según varíe el método de pago.  Tenemos a disposición los profesionales necesarios para llevar a cabo el trabajo que implica el desarrollo de un loteo.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.",
         },
         {
           id: 3,
           title: "Consorcios",
-          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
+          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg',
+          description: "Nuestra administración de consorcios cuenta con el soporte en software para el pago de las expensas y gastos que la figura del consorcio demande, como así también una atención especializada para toda situación que sea necesaria la intervención de la administración.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.",
         }
       ],
       transparent: 'rgba(255, 255, 255, 0)',

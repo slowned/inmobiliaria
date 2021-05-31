@@ -1,10 +1,11 @@
 <template>
+  <div>
     <v-container>
       <!-- servicios -->
       <Services />
       <Services2 />
       <!-- imagenes chetas -->
-      <v-container fluid>
+      <v-container>
         <v-row>
           <v-col>
             <v-img
@@ -34,26 +35,23 @@
           </v-col>
         </v-row>
       </v-container>
+      <v-spacer> </v-spacer>
       <!-- nosotros -->
-      <v-row>
-        <v-container>
-          <v-col>
-            <v-card
-              width="100%"
-              color="#385F73"
-              dark
-            >
-              <v-card-title class="text-h5">
-                Quienes somos titulo
-              </v-card-title>
+      <v-container>
+        <v-card
+          width="100%"
+          color="#385F73"
+          dark
+        >
+          <v-card-title class="text-h5">
+            Quienes somos titulo
+          </v-card-title>
 
-              <v-card-subtitle>Listen to your favorite artists and albums whenever and wherever, online and offline.</v-card-subtitle>
-            </v-card>
-          </v-col>
-        </v-container>
-      </v-row>
+          <v-card-subtitle>Listen to your favorite artists and albums whenever and wherever, online and offline.</v-card-subtitle>
+        </v-card>
+      </v-container>
     </v-container>
-
+  </div>
 </template>
 
 <script>

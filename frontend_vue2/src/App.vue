@@ -21,9 +21,8 @@
     <v-main>
       <!-- Provides the application the proper gutter -->
       <!-- If using vue-router -->
-        <router-view></router-view>
+      <router-view></router-view>
     </v-main>
-
     <Footer />
   </v-app>
 </template>
