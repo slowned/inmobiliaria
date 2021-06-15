@@ -1,6 +1,5 @@
 <template>
   <div class="block galleryBlock">
-    <v-container fluid>
       <v-row>
         <v-col v-for="item in items" :key="item.id" class="d-flex child-flex" cols="6" sm="4">
           <v-hover v-slot="{ hover }">
@@ -22,7 +21,6 @@
           </v-hover>
         </v-col>
       </v-row>
-    </v-container>
   </div>
 </template>
 

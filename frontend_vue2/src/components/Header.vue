@@ -8,13 +8,13 @@
         <img class="mr-3" src="@/assets/logo.png" height="110"/>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <!-- <v-toolbar-items class="hidden-xs-only"> -->
+      <v-toolbar-items class="hidden-xs-only">
         <v-btn text rounded to="/">Inicio</v-btn>
         <v-btn text rounded to="propiedades">Alquileres</v-btn>
         <v-btn text rounded >Ventas</v-btn>
-        <v-btn text rounded >Nosotros</v-btn>
+        <v-btn text rounded @click="$vuetify.goTo(nosotros)">Nosotros</v-btn>
         <v-btn text rounded @click="$vuetify.goTo(9999)">Contacto</v-btn>
-      <!-- </v-toolbar-items> -->
+      </v-toolbar-items>
       <div class="hidden-sm-and-up">
         <v-menu offset-y>
           <template v-slot:activator="{ on }">

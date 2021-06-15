@@ -1,48 +1,49 @@
 <template>
     <v-row>
-       <v-col v-for="service in services" :key="`${service.title}`">
+      <v-col v-for="service in services" :key="`${service.title}`">
         <v-dialog
-          v-model="dialog"
-          width="500"
+        v-model="dialog"
+        width="500"
         >
-          <template v-slot:activator="{ on, attrs }">
-            <v-card
-              v-bind="attrs"
-              v-on="on"
-              flat
+        <template v-slot:activator="{ on, attrs }">
+          <v-card
+            v-bind="attrs"
+            v-on="on"
+            flat
+          >
+            <v-img
+              src="https://picsum.photos/350/165?random"
+              height="400px"
+              class="grey darken-4"
             >
-              <v-img
-                src="https://picsum.photos/350/165?random"
-                height="125"
-                class="grey darken-4"
-              ></v-img>
               <v-card-title class="title">
                 {{ service.title }}
               </v-card-title>
-            </v-card>
-          </template>
-          <v-card>
-            <v-card-title class="headline grey lighten-2">
-              {{ service.title }}
-            </v-card-title>
-            <v-card-text>
-              {{ service.description }}
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn
-                color="primary"
-                text
-                @click="dialog = false"
-              >
-                cerrar
-              </v-btn>
-            </v-card-actions>
+            </v-img>
           </v-card>
-        </v-dialog>
-      </v-col>
-    </v-row>
+        </template>
+        <v-card>
+          <v-card-title class="headline grey lighten-2">
+            {{ service.title }}
+          </v-card-title>
+          <v-card-text>
+            {{ service.description }}
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+              color="primary"
+              text
+              @click="dialog = false"
+            >
+              cerrar
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
