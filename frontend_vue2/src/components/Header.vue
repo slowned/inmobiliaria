@@ -2,14 +2,14 @@
   <v-container fluid>
     <v-app-bar
       app
-
+      color="#846D34"
     >
       <v-toolbar-title>
         <img class="mr-3" src="@/assets/logo.png" height="110"/>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <!-- <v-toolbar-items class="hidden-xs-only"> -->
-        <v-btn text rounded to="/">Inicio</v-btn>
+        <v-btn text rounded to="/" @click="$vuetify.goTo(0)">Inicio</v-btn>
         <v-btn text rounded to="propiedades">Alquileres</v-btn>
         <v-btn text rounded >Ventas</v-btn>
         <v-btn text rounded >Nosotros</v-btn>

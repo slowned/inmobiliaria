@@ -3,14 +3,15 @@
     <v-spacer> </v-spacer>
     <v-footer
       padless
+
+      dark
     >
       <v-card
         flat
         tile
-        dark
-        class="indigo white--text text-center"
-        color="grey darken-4"
+        class="text-center"
         width="100%"
+        color="#846D34"
       >
         <v-card-text>
           <v-btn
