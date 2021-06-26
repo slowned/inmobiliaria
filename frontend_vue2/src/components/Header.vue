@@ -9,37 +9,51 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <!-- <v-toolbar-items class="hidden-xs-only"> -->
-        <v-btn text rounded to="/" @click="$vuetify.goTo(0)">Inicio</v-btn>
-        <v-btn text rounded to="propiedades">Alquileres</v-btn>
-        <v-btn text rounded >Ventas</v-btn>
-        <v-btn text rounded >Nosotros</v-btn>
-        <v-btn text rounded @click="$vuetify.goTo(9999)">Contacto</v-btn>
+        <v-btn text rounded to="/" @click="$vuetify.goTo(0)" class="hidden-xs-only">Inicio</v-btn>
+        <v-btn text rounded to="propiedades" class="hidden-xs-only">Alquileres</v-btn>
+        <v-btn text rounded class="hidden-xs-only">Ventas</v-btn>
+        <v-btn text rounded class="hidden-xs-only">Nosotros</v-btn>
+        <v-btn text rounded @click="$vuetify.goTo(9999)" class="hidden-xs-only">Contacto</v-btn>
       <!-- </v-toolbar-items> -->
       <div class="hidden-sm-and-up">
-        <v-menu offset-y>
-          <template v-slot:activator="{ on }">
-            <v-app-bar-nav-icon v-on="on"></v-app-bar-nav-icon>
-          </template>
-          <v-list class="responsiveMenu">
-            <v-list-item>
-              <v-list-item-title><v-btn text :to="{ name: 'Home' }">Inicio</v-btn></v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title><v-btn text :to="{ name: 'Properties' }">Alquileres</v-btn></v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title><v-btn text  :to="{ }">Ventas</v-btn></v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title><v-btn text :to="{ }">Nosotros</v-btn></v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title><v-btn text @click="$vuetify.goTo(9999)" :to="{ }">Contacto</v-btn></v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
+        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       </div>
     </v-app-bar>
+    <v-navigation-drawer
+    v-model="drawer"
+    absolute
+    temporary
+    >
+    <v-list
+    nav
+    dense
+    >
+    <v-list-item-group
+    v-model="group"
+    active-class="deep-purple--text text--accent-4"
+    >
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-home</v-icon>
+        </v-list-item-icon>
+        <v-list-item-title>Inicio</v-list-item-title>
+      </v-list-item>
+
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-account</v-icon>
+        </v-list-item-icon>
+        <v-list-item-title>Nosotros</v-list-item-title>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-email</v-icon>
+        </v-list-item-icon>
+        <v-list-item-title>Contacto</v-list-item-title>
+      </v-list-item>
+    </v-list-item-group>
+</v-list>
+</v-navigation-drawer>
   </v-container>
 </template>
 
@@ -54,6 +68,8 @@ export default {
       offset: 0,
       easing: 'easeInOutCubic',
       easings: Object.keys(easings),
+      drawer: false,
+      group: null,
     }
   },
   options () {

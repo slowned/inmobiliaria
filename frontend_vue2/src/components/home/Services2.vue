@@ -2,7 +2,7 @@
   <div class="block galleryBlock">
     <v-container fluid>
       <v-row>
-        <v-col v-for="item in items" :key="item.id" class="d-flex child-flex" cols="6" sm="4">
+        <v-col v-for="item in items" :key="item.id" class="d-flex child-flex" cols="12" sm="4">
             <v-dialog
               transition="dialog-bottom-transition"
               max-width="600"
@@ -10,7 +10,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <v-card
                   flat tile class="d-flex"
-
+                  elevation="8"
                   v-bind="attrs"
                   v-on="on"
                 >

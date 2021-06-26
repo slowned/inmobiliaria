@@ -3,8 +3,6 @@
     <v-spacer> </v-spacer>
     <v-footer
       padless
-
-      dark
     >
       <v-card
         flat

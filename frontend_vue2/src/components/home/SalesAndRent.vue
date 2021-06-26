@@ -2,10 +2,11 @@
   <div class="block galleryBlock">
     <v-container fluid>
       <v-row>
-        <v-col v-for="item in items" :key="item.id" class="d-flex child-flex" cols="6">
+        <v-col v-for="item in items" :key="item.id" class="d-flex child-flex" cols="12" sm="6">
           <v-hover v-slot="{ hover }">
               <v-card
-                flat tile class="d-flex"
+                elevation="8"
+                tile class="d-flex"
                 :class="{ 'on-hover': hover }"
                 :height="200"
                 to="propiedades"
@@ -13,7 +14,7 @@
               <v-img :src="item.src" aspect-ratio="1" class="grey lighten-2">
                 <template v-slot:placeholder>
                   <v-row class="fill-height ma-0" align="center" justify="center">
-                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                    <v-progress-circular indeterminate color="#BAA460"></v-progress-circular>
                   </v-row>
                 </template>
                 <div class="center">
@@ -37,12 +38,12 @@ export default {
         {
           id: 1,
           title: "Alquileres",
-          src: 'https://picsum.photos/350/165?random'
+          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
         },
         {
           id: 2,
           title: "Ventas",
-          src: 'https://picsum.photos/350/165?random'
+          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
         },
       ],
       transparent: 'rgba(255, 255, 255, 0)',
