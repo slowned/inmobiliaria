@@ -18,16 +18,29 @@ class PropertyImages(models.Model):
     )
 
 
+class Services:
+    LUZ = 0
+    GAS_NATURAL = 1
+    CLOACA = 2
+
+    CHOICES = (
+        (LUZ, 'luz'),
+        (GAS_NATURAL, 'gas natual'),
+        (CLOACA, 'clacas'),
+    )
+
+
 class Property(models.Model):
     """
     Reprecent a home property.
     """
+    expensas = models.PositiveSmallIntegerField(null=True, blank=True)
     address = models.CharField(max_length=255, null=True)
     available = models.BooleanField(default=True)
     coordinates = models.CharField(max_length=255, blank=True, null=True)  # x,y para google maps
     description = models.CharField(max_length=255, null=True)
-    services = models.CharField(max_length=50, blank=True, null=True)  # choices=[luz, gas, natural, cochera]
-
+    services = models.CharField(
+        max_length=255, blank=True, null=True)  # [luz, gas, natural, cochera]
     home_type = models.PositiveSmallIntegerField(
         choices=HomeType.CHOICES,
         default=HomeType.HOUSE,
@@ -47,3 +60,5 @@ class Property(models.Model):
 
     def __srt__(self):
         return f"Propiedad: {self.id}"
+
+    # definir get services spliteados x ,
