@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name: 'PropertyDetail', params: { id: property.id } }">
+  <v-container>
       <v-card
         class="mx-auto"
         max-width="400"
@@ -29,9 +29,16 @@
         </v-card-text>
 
         <v-card-actions>
+          <v-btn
+            color="orange"
+            text
+            :to="{ name: 'PropertyDetail', params: { id: property.id } }"
+          >
+            Conocer
+          </v-btn>
         </v-card-actions>
       </v-card>
-    </router-link>
+  </v-container>
 </template>
 
 <script>

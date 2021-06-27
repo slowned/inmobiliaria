@@ -21,7 +21,6 @@
     >
       Buscar
     </v-btn>
-
   </v-form>
 </template>
 
