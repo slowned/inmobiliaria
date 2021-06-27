@@ -13,6 +13,7 @@
                   elevation="8"
                   v-bind="attrs"
                   v-on="on"
+                  dark
                 >
                   <v-img :src="item.src" aspect-ratio="1" class="grey lighten-2">
                     <template v-slot:placeholder>
@@ -27,7 +28,7 @@
                 </v-card>
               </template>
               <template v-slot:default="dialog">
-                <v-card>
+                <v-card >
                   <v-toolbar
                     color="#846D34"
                     dark
@@ -60,19 +61,19 @@ export default {
           id: 1,
           title: "Tasaciones",
           message: "Una buena tasación requiere de la correcta aplicación de las distintas técnicas que forman la actividad de tasar una propiedad, por eso queremos informarte que contamos con la formación profesional y académica necesaria para justipreciar un inmueble. Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.",
-          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
+          src: require(`@/assets/img/logo/propuesta_logo_VIDALLED_CAMARA_03.png`)
         },
         {
           id: 2,
           title: "Loteos",
           message: "Contamos con experiencia dentro de la inmobiliaria para el manejo y administración de venta de tierras a gran escala, con distintas formas de aplicación según varíe el método de pago. Tenemos a disposición los profesionales necesarios para llevar a cabo el trabajo que implica el desarrollo de un loteo. Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.",
-          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
+          src:  require(`@/assets/img/logo/propuesta_logo_VIDALLED_CAMARA_03.png`)
         },
         {
           id: 3,
           title: "Consorcios",
           message: "Nuestra administración de consorcios cuenta con el soporte en software para el pago de las expensas y gastos que la figura del consorcio demande, como así también una atención especializada para toda situación que sea necesaria la intervención de la administración.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.",
-          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
+          src:  require(`@/assets/img/logo/propuesta_logo_VIDALLED_CAMARA_03.png`)
         }
       ],
       transparent: 'rgba(255, 255, 255, 0)',
@@ -85,7 +86,7 @@ export default {
 .cardTitle {
     text-align: center;
     font-size: 35px;
-    font-family: 'Big Shoulders Stencil Display';
+    font-family: sans-serif;
 }
 .center {
   position: absolute;

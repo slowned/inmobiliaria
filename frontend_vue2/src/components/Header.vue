@@ -2,16 +2,21 @@
   <v-container fluid>
     <v-app-bar
       app
+      prominent
       color="#846D34"
+      shrink-on-scroll
+      fade-img-on-scroll
+      src="https://i.picsum.photos/id/173/1920/1080.jpg?hmac=OGOXhNmW53tlx-Iw_TOlu_GwtROuQ-IjHL3EqEk-UBw"
     >
       <v-toolbar-title>
-        <img class="mr-3" src="@/assets/logo.png" height="110"/>
+        <v-img
+          src="@/assets/img/logo/fondo_tranparente_recortado.png"
+          max-width="185"
+        ></v-img>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <!-- <v-toolbar-items class="hidden-xs-only"> -->
         <v-btn text rounded to="/" @click="$vuetify.goTo(0)" class="hidden-xs-only">Inicio</v-btn>
-        <v-btn text rounded to="propiedades" class="hidden-xs-only">Alquileres</v-btn>
-        <v-btn text rounded class="hidden-xs-only">Ventas</v-btn>
         <v-btn text rounded class="hidden-xs-only">Nosotros</v-btn>
         <v-btn text rounded @click="$vuetify.goTo(9999)" class="hidden-xs-only">Contacto</v-btn>
       <!-- </v-toolbar-items> -->

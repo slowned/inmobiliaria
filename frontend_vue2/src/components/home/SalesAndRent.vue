@@ -10,6 +10,7 @@
                 :class="{ 'on-hover': hover }"
                 :height="200"
                 to="propiedades"
+                dark
               >
               <v-img :src="item.src" aspect-ratio="1" class="grey lighten-2">
                 <template v-slot:placeholder>
@@ -38,12 +39,12 @@ export default {
         {
           id: 1,
           title: "Alquileres",
-          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
+          src: require(`@/assets/img/logo/propuesta_logo_VIDALLED_CAMARA_02.png`)
         },
         {
           id: 2,
           title: "Ventas",
-          src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg'
+          src: require(`@/assets/img/logo/propuesta_logo_VIDALLED_CAMARA_02.png`)
         },
       ],
       transparent: 'rgba(255, 255, 255, 0)',
@@ -57,7 +58,7 @@ export default {
     text-align: center;
     font-size: 35px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: sans-serif;
 }
 .center {
   position: absolute;
