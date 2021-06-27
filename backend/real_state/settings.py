@@ -30,7 +30,6 @@ ALLOWED_HOSTS = []
 
 # Application definition
 LOCAL_APPS = [
-    'owners.apps.OwnersConfig',
     'properties.apps.PropertiesConfig',
 ]
 
@@ -42,6 +41,7 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_filters',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS

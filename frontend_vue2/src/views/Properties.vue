@@ -12,7 +12,7 @@
 
       <v-col cols="12" md="4">
         <h3> Buscar Propiedades en alquiler </h3>
-        <SearchForm />
+        <SearchForm @filterProperties="filterProperties"/>
       </v-col>
     </v-row>
   </v-container>
@@ -42,6 +42,22 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+  },
+  methods: {
+    filterProperties(queryParams) {
+      console.log('lo params viteh', queryParams);
+      PropertyService.filterProperties(queryParams)
+        .then((response) => {
+          this.properties = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+    reset() {
+      this.$refs.form.reset()
+    },
+
   },
 };
 </script>

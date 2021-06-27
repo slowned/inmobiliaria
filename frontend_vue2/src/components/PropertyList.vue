@@ -1,5 +1,4 @@
 <template>
-  <v-container>
     <router-link :to="{ name: 'PropertyDetail', params: { id: property.id } }">
       <v-card
         class="mx-auto"
@@ -10,9 +9,9 @@
           height="200px"
           src="https://picsum.photos/350/165?random"
         >
-          <v-card-title>{{ property.address }}</v-card-title>
         </v-img>
 
+        <v-card-title>{{ property.address }}</v-card-title>
         <v-card-subtitle class="pb-0">
           precio $: {{ property.price }}
         </v-card-subtitle>
@@ -25,21 +24,14 @@
 
         <v-divider class="mx-4"></v-divider>
 
-        <v-card-title>
-          Servicios
-        </v-card-title>
+        <v-card-text class="text--primary">
+        { x }m2 { x }Ambientes { x }Dormitorios { x }Baños
+        </v-card-text>
 
         <v-card-actions>
-          <v-btn
-            color="orange"
-            text
-          >
-            Conocer
-          </v-btn>
         </v-card-actions>
       </v-card>
     </router-link>
-  </v-container>
 </template>
 
 <script>
