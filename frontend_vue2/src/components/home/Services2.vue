@@ -1,6 +1,6 @@
 <template>
   <div class="block galleryBlock">
-    <v-container fluid>
+    <v-container>
       <v-row>
         <v-col v-for="item in items" :key="item.id" class="d-flex child-flex" cols="12" sm="4">
             <v-dialog
@@ -56,6 +56,7 @@ export default {
   name: "Services2",
   data() {
     return {
+      dialog: false,
       items: [
         {
           id: 1,

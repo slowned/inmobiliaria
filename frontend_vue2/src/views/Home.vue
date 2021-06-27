@@ -1,4 +1,5 @@
 <template>
+  <div>
     <v-container>
       <SalesAndRent />
       <Services2 />

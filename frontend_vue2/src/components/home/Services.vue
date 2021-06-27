@@ -1,6 +1,7 @@
 <template>
+  <v-container>
     <v-row>
-       <v-col v-for="service in services" :key="`${service.title}`">
+      <v-col v-for="service in services" :key="`${service.title}`" cols="12" md="4">
         <v-dialog
           v-model="dialog"
           width="500"
@@ -12,7 +13,7 @@
               flat
             >
               <v-img
-                src="https://picsum.photos/350/165?random"
+                :src="service.src"
                 height="125"
                 class="grey darken-4"
               ></v-img>
@@ -43,6 +44,7 @@
         </v-dialog>
       </v-col>
     </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -53,15 +55,18 @@ export default {
     services: [
       {
         title: "Tasaciones",
-        description: "Una buena tasación requiere de la correcta aplicación de las distintas técnicas que forman la actividad de tasar una propiedad, por eso queremos informarte que contamos con la formación profesional y académica necesaria para justipreciar un inmueble.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos."
+        description: "Una buena tasación requiere de la correcta aplicación de las distintas técnicas que forman la actividad de tasar una propiedad, por eso queremos informarte que contamos con la formación profesional y académica necesaria para justipreciar un inmueble.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.",
+        src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg',
       },
       {
         title: "Loteos",
-        description: "Contamos con experiencia dentro de la inmobiliaria para el manejo y administración de venta de tierras a gran escala, con distintas formas de aplicación según varíe el método de pago.  Tenemos a disposición los profesionales necesarios para llevar a cabo el trabajo que implica el desarrollo de un loteo.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos."
+        description: "Contamos con experiencia dentro de la inmobiliaria para el manejo y administración de venta de tierras a gran escala, con distintas formas de aplicación según varíe el método de pago.  Tenemos a disposición los profesionales necesarios para llevar a cabo el trabajo que implica el desarrollo de un loteo.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.",
+        src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg',
       },
       {
         title: "Consorcios",
-        description: "Nuestra administración de consorcios cuenta con el soporte en software para el pago de las expensas y gastos que la figura del consorcio demande, como así también una atención especializada para toda situación que sea necesaria la intervención de la administración.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos."
+        description: "Nuestra administración de consorcios cuenta con el soporte en software para el pago de las expensas y gastos que la figura del consorcio demande, como así también una atención especializada para toda situación que sea necesaria la intervención de la administración.  Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.",
+        src: 'https://la.network/wp-content/uploads/2019/09/mario-home.jpg',
       },
     ],
   })
