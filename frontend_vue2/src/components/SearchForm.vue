@@ -1,27 +1,80 @@
 <template>
-  <v-form>
-    <v-text-field v-model="amountMin" label="Precio minimo"/>
-    <v-text-field v-model="amountMax" label="Precio maximo"/>
-    <v-autocomplete v-model="selectedOrder" label="Ordenar Anuncios" :items="orderBy" />
-    <v-autocomplete v-model="selectedRoom" label="Ambientes" :items="rooms" />
-    <v-autocomplete v-model="selectedBedroom" label="Dormitorios" :items="bedRooms" />
-    <v-autocomplete v-model="selectedOrder" label="Ordenar Anuncios" :items="orderBy" />
-    <v-autocomplete v-model="garage" label="Cochera" :items="yesNoOptions" />
-    <v-autocomplete v-model="garden" label="Patio" :items="yesNoOptions" />
-    <v-select
-      v-model="selectedPropertiType"
-      :items="propertiesType"
-      label="Tipo Inmueble"
-    ></v-select>
-    <v-btn
-      dark
-      color="#000001"
-      class="mr-4"
-      @click="filterProperties"
-    >
-      Buscar
-    </v-btn>
-  </v-form>
+    <v-card>
+      <v-container>
+        <v-card-title>
+          <span>Buscar</span>
+        </v-card-title>
+        <v-card-text>
+          <v-form v-model="valid">
+            <v-row>
+              <v-col>
+                <v-select
+                v-model="selectedPropertiType"
+                :items="propertiesType"
+                label="Tipo Inmueble"
+                ></v-select>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <v-text-field v-model="amountMin" label="Precio minimo"/>
+              </v-col>
+              <v-col>
+                <v-text-field v-model="amountMax" label="Precio maximo"/>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <v-autocomplete v-model="selectedRoom" label="Ambientes" :items="rooms" />
+                <!-- <v-subheader class="pl-0">
+                Show thumb when using slider
+              </v-subheader>
+              <v-slider
+              v-model="slider"
+              thumb-label
+              ></v-slider> -->
+                </v-col>
+              <v-col>
+                <v-autocomplete v-model="selectedBedroom" label="Dormitorios" :items="bedRooms" />
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <v-switch
+                v-model="garage"
+                label="Cochera"
+                color="#BAA460"
+                inset
+                >
+                </v-switch>
+              </v-col>
+              <v-col>
+                <v-switch
+                v-model="garden"
+                label="Patio"
+                color="#846D34"
+                inset
+                >
+                </v-switch>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-card-actions>
+                <v-btn
+                dark
+                absolute
+                right
+                color="#BAA460"
+                class="mr-4"
+                @click="filterProperties"
+                >Buscar
+                </v-btn>
+              </v-card-actions>
+            </v-row>
+          </v-form>
+        </v-card-text>
+      </v-container>
+  </v-card>
 </template>
 
 <script>
