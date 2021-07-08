@@ -1,88 +1,117 @@
 {
-  "properties": [
-    {
-      "id": 1,
-      "address": "Evergreen 123",
-      "price": 34000,
-      "description": "vecino de flanders",
-      "image": "https://picsum.photos/10/6?image=15"
+  "scores": [
+   {
+        "id": "830132c3-9a22-4a39-9856-22e1d51c5593",
+        "person": {
+            "id": "2dc50c7b-4a79-43cf-b1e6-023cbcb82783",
+            "last_name": "Lodoño",
+            "national_id": "79451812",
+            "created_at": "2021-07-08T14:56:39.780237Z",
+            "modified_at": "2021-07-08T14:56:39.780275Z"
+        },
+        "state": 4,
+        "strategy": {
+            "id": "04d10304-ecf7-4136-83ad-5168bdc2f8db",
+            "name": "MoniStrategy",
+            "version": "1",
+            "is_active": true,
+            "created_at": "2021-07-08T14:56:39.850290Z",
+            "modified_at": "2021-07-08T14:56:39.850310Z"
+        },
+        "source": 0,
+        "generation_reason": 0,
+        "full_name": "LONDOÑO AFANADOR JUAN PABLO",
+        "nr": 1,
+        "segment": 1,
+        "income": 0,
+        "paid_loans": 0,
+        "created_at": "2021-07-08T15:08:32.002567Z",
+        "modified_at": "2021-07-08T15:08:32.105334Z"
     },
     {
-      "id": 2,
-      "address": "45 Street",
-      "price": 44000,
-      "description": "baño enm suite pa",
-      "image": "https://picsum.photos/10/6?image=25"
+        "id": "9ef772f3-d112-40fd-b704-0c036c797f5d",
+        "person": {
+            "id": "2dc50c7b-4a79-43cf-b1e6-023cbcb82783",
+            "last_name": "Lodoño",
+            "national_id": "79451812",
+            "created_at": "2021-07-08T14:56:39.780237Z",
+            "modified_at": "2021-07-08T14:56:39.780275Z"
+        },
+        "state": 4,
+        "strategy": {
+            "id": "04d10304-ecf7-4136-83ad-5168bdc2f8db",
+            "name": "MoniStrategy",
+            "version": "1",
+            "is_active": true,
+            "created_at": "2021-07-08T14:56:39.850290Z",
+            "modified_at": "2021-07-08T14:56:39.850310Z"
+        },
+        "source": 0,
+        "generation_reason": 0,
+        "full_name": "LONDOÑO AFANADOR JUAN PABLO",
+        "nr": 1,
+        "segment": 1,
+        "income": 0,
+        "paid_loans": 0,
+        "created_at": "2021-07-08T15:06:49.857519Z",
+        "modified_at": "2021-07-08T15:06:49.965579Z"
     },
     {
-      "id": 3,
-      "address": "Calle falsa 4818",
-      "price": 3000,
-      "description": "alta choza",
-      "image": "https://picsum.photos/10/6?image=35"
+        "id": "b899f225-0de1-4dfc-9582-309cfb9f73ce",
+        "person": {
+            "id": "2dc50c7b-4a79-43cf-b1e6-023cbcb82783",
+            "last_name": "Lodoño",
+            "national_id": "79451812",
+            "created_at": "2021-07-08T14:56:39.780237Z",
+            "modified_at": "2021-07-08T14:56:39.780275Z"
+        },
+        "state": 4,
+        "strategy": {
+            "id": "04d10304-ecf7-4136-83ad-5168bdc2f8db",
+            "name": "MoniStrategy",
+            "version": "1",
+            "is_active": true,
+            "created_at": "2021-07-08T14:56:39.850290Z",
+            "modified_at": "2021-07-08T14:56:39.850310Z"
+        },
+        "source": 0,
+        "generation_reason": 0,
+        "full_name": "LONDOÑO AFANADOR JUAN PABLO",
+        "nr": 1,
+        "segment": 1,
+        "income": 0,
+        "paid_loans": 0,
+        "created_at": "2021-07-08T15:02:16.596420Z",
+        "modified_at": "2021-07-08T15:02:16.718023Z"
     },
     {
-      "id": 4,
-      "address": "Evergreen 123",
-      "price": 34000,
-      "description": "vecino de flanders",
-      "image": "https://picsum.photos/10/6?image=15"
-    },
-    {
-      "id": 5,
-      "address": "45 Street",
-      "price": 44000,
-      "description": "baño enm suite pa",
-      "image": "https://picsum.photos/10/6?image=25"
-    },
-    {
-      "id": 6,
-      "address": "Calle falsa 4818",
-      "price": 3000,
-      "description": "alta choza",
-      "image": "https://picsum.photos/10/6?image=35"
-    },
-    {
-      "id": 7,
-      "address": "Evergreen 123",
-      "price": 34000,
-      "description": "vecino de flanders",
-      "image": "https://picsum.photos/10/6?image=15"
-    },
-    {
-      "id": 8,
-      "address": "45 Street",
-      "price": 44000,
-      "description": "baño enm suite pa",
-      "image": "https://picsum.photos/10/6?image=25"
-    },
-    {
-      "id": 9,
-      "address": "Calle falsa 4818",
-      "price": 3000,
-      "description": "alta choza",
-      "image": "https://picsum.photos/10/6?image=35"
-    },
-    {
-      "id": 10,
-      "address": "Evergreen 123",
-      "price": 34000,
-      "description": "vecino de flanders",
-      "image": "https://picsum.photos/10/6?image=15"
-    },
-    {
-      "id": 11,
-      "address": "45 Street",
-      "price": 44000,
-      "description": "baño enm suite pa",
-      "image": "https://picsum.photos/10/6?image=25"
-    },
-    {
-      "id": 12,
-      "address": "Calle falsa 4818",
-      "price": 3000,
-      "description": "alta choza",
-      "image": "https://picsum.photos/10/6?image=35"
+        "id": "442ee194-c188-4217-97b5-5b360a0b64b4",
+        "person": {
+            "id": "2dc50c7b-4a79-43cf-b1e6-023cbcb82783",
+            "last_name": "Lodoño",
+            "national_id": "79451812",
+            "created_at": "2021-07-08T14:56:39.780237Z",
+            "modified_at": "2021-07-08T14:56:39.780275Z"
+        },
+        "state": 4,
+        "strategy": {
+            "id": "04d10304-ecf7-4136-83ad-5168bdc2f8db",
+            "name": "MoniStrategy",
+            "version": "1",
+            "is_active": true,
+            "created_at": "2021-07-08T14:56:39.850290Z",
+            "modified_at": "2021-07-08T14:56:39.850310Z"
+        },
+        "source": 0,
+        "generation_reason": 0,
+        "full_name": "LONDOÑO AFANADOR JUAN PABLO",
+        "nr": 1,
+        "segment": 1,
+        "income": 0,
+        "paid_loans": 0,
+        "created_at": "2021-07-08T14:56:39.785719Z",
+        "modified_at": "2021-07-08T14:56:39.980393Z"
     }
-  ]
+  ],
+  
 }
