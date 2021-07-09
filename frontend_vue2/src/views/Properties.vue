@@ -1,6 +1,13 @@
 <template>
   <v-container>
-    <h1> Propiedades en alquiler </h1>
+    <v-card flat>
+      <v-card-title>ALQUILERES</v-card-title>
+      <v-card-text> Para el sector Alquileres, nuestra inmobiliaria cuenta con varias formas de publicitar y comercializar las propiedades en situación de locación.
+        Contamos con una propia página web como así también redes sociales; Instagram y Facebook.
+        Creemos necesaria la utilización de otras plataformas de renombre que nos van a brindar la posibilidad de hacer crecer la cantidad de veedores de las propiedades ofrecidas, y así también cubrir las demandas actuales, que casi en su totalidad se manifiestan por internet.
+        Nuestros valores de vanguardia nos acercan a la era digital para evitar el uso del papel y así contribuir con el medio ambiente.
+        Realiza tu consulta sin cargo para mayor información, nosotros te ayudamos.</v-card-text>
+    </v-card>
     <v-row justify="end">
       <v-col
         cols="12"

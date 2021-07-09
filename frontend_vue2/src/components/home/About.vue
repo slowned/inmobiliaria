@@ -8,9 +8,9 @@
         color="#BAA460"
         elevation="8"
         >
-        <v-card-subtitle class="text-h6">
-          Una propuesta de vanguardia para el rubro inmobiliario.
-        </v-card-subtitle>
+        <v-card-title class="text-h6">
+          Una propuesta de vanguardia para el rubro inmobiliario
+        </v-card-title>
         <v-card-text>
             Nuestros valores transmiten responsabilidad, seriedad y confianza, como así también entusiasmo y juventud.
             Creemos en el uso de la tecnología y métodos digitales, para garantizar así un trabajo especializado y de la misma manera contribuir con el medio ambiente.
