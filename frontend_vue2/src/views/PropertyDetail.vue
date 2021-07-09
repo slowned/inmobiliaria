@@ -1,6 +1,11 @@
 <template>
-  <v-main>
       <v-container>
+        <v-row>
+          <v-col>
+            <h1>Av. Siempre viva 2145</h1>
+            <h3>$ 15.500</h3>
+          </v-col>
+        </v-row>
         <v-row>
           <v-col cols="8">
             <v-carousel>
@@ -37,42 +42,42 @@
                         <v-list-item>
                           <v-list-item-content>Superficie total:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.calories }}
+                            {{ item.total_surface }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Superficie cubierta:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.fat }}
+                            {{ item.surface }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Habitaciones:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.carbs }}
+                            {{ item.bedrooms }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Banios:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.protein }}
+                            {{ item.bathrooms }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Ambientes:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.sodium }}
+                            {{ item.rooms }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Antiguedad:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.calcium }}
+                            {{ item.antiquity }}
                           </v-list-item-content>
                         </v-list-item>
 
@@ -107,10 +112,12 @@
     </v-row>
   </v-container>
 
-  </v-main>
 </template>
 
+
+
 <script>
+
 export default {
   name: "Contact",
   data () {
@@ -133,13 +140,12 @@ export default {
       items: [
         {
           name: 'Detalles',
-          calories: 159,
-          fat: 6.0,
-          carbs: 24,
-          protein: 4.0,
-          sodium: 87,
-          calcium: '14%',
-          iron: '1%',
+          total_surface: 150,
+          surface: 80,
+          bedrooms: 3,
+          bathrooms: 2,
+          rooms: 6,
+          antiquity: 15,
         },
       ],
     }

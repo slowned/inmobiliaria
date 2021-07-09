@@ -24,8 +24,19 @@
 
         <v-divider class="mx-4"></v-divider>
 
-        <v-card-text class="text--primary">
-        { x }m2 { x }Ambientes { x }Dormitorios { x }Baños
+        <v-card-text >
+            <v-icon>
+              mdi-texture-box
+            </v-icon> 95 m2
+            <v-icon>
+              mdi-floor-plan
+            </v-icon> 5
+            <v-icon>
+              mdi-bed-king
+            </v-icon> 3
+            <v-icon>
+              mdi-paper-roll
+            </v-icon> 2
         </v-card-text>
 
         <v-card-actions>
