@@ -58,12 +58,12 @@
                <v-spacer></v-spacer>
                <strong>CONTACTO</strong>
                <v-spacer></v-spacer>
-               Jose Gabino Blanco 1527 esq. Batalla de Cepeda
-               <v-spacer></v-spacer>
                (351) 3651121
                (351) 6533887
                <v-spacer></v-spacer>
                inmo@test.com
+               <v-spacer></v-spacer>
+               Jose Gabino Blanco 1527
              </v-col>
             <v-col>
               <v-avatar size="80">
@@ -108,3 +108,9 @@
     }),
   }
 </script>
+
+<style scoped>
+* {
+  font-family: DIN pro;
+}
+</style>

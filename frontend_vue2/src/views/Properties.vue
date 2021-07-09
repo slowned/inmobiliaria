@@ -98,3 +98,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+* {
+  font-family: DIN pro;
+}
+</style>
