@@ -2,7 +2,7 @@
     <v-container>
       <SalesAndRent />
       <Services2 />
-      <About />
+      <About id='about'/>
     </v-container>
 </template>
 

@@ -8,7 +8,7 @@
       <!-- If using vue-router -->
       <router-view></router-view>
     </v-main>
-    <Footer />
+    <Footer id="footer"/>
 
   </v-app>
 </template>
