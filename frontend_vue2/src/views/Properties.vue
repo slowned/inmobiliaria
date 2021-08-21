@@ -10,7 +10,7 @@
     </v-card>
     <v-row justify="end">
       <v-col
-        cols="12"
+        cols="6"
         sm="3"
       >
         <v-select
@@ -23,15 +23,14 @@
     <v-row>
       <v-dialog
         v-model="dialog"
-
         max-width="600px"
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             color="#846D34"
             dark
-            fixed
             right
+            fixed
             fab
             v-bind="attrs"
             v-on="on"
@@ -44,7 +43,7 @@
     </v-row>
     <v-row>
         <v-row>
-          <v-col cols="12" md="4" v-for="property in properties" :key="property.id">
+          <v-col cols="12" md="4" sm="6" v-for="property in properties" :key="property.id">
             <PropertyList :property="property" />
           </v-col>
         </v-row>
