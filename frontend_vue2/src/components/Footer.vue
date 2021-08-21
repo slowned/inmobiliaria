@@ -28,8 +28,7 @@
 
         <v-container>
           <v-row>
-            <v-col>
-
+            <v-col xs="12" order-sm="1">
               <v-avatar size="80">
                 <img
                   src="https://cdn.vuetifyjs.com/images/john.jpg"
@@ -45,27 +44,26 @@
                 <v-list-item-subtitle>Matricula nro: 123456</v-list-item-subtitle>
               </v-list-item-content>
             </v-col>
-             <v-col>
-               <div class="d-flex flex-column justify-space-between align-center">
-
-                 <v-img
-                 src="@/assets/img/logo/fondo_tranparente_recortado.png"
-                 max-height="170"
-                 max-width="170"
-                 ></v-img>
-               </div>
-               <v-divider></v-divider>
-               <v-spacer></v-spacer>
-               <strong>CONTACTO</strong>
-               <v-spacer></v-spacer>
-               (351) 3651121
-               (351) 6533887
-               <v-spacer></v-spacer>
-               inmo@test.com
-               <v-spacer></v-spacer>
-               Jose Gabino Blanco 1527
-             </v-col>
-            <v-col>
+            <v-col xs="12" order="last" order-sm="2">
+             <div class="d-flex flex-column justify-space-between align-center">
+               <v-img
+               src="@/assets/img/logo/fondo_tranparente_recortado.png"
+               max-height="170"
+               max-width="170"
+               ></v-img>
+             </div>
+             <v-divider></v-divider>
+             <v-spacer></v-spacer>
+             <strong>CONTACTO</strong>
+             <v-spacer></v-spacer>
+             (351) 3651121
+             (351) 6533887
+             <v-spacer></v-spacer>
+             inmo@test.com
+             <v-spacer></v-spacer>
+             Jose Gabino Blanco 1527
+            </v-col>
+            <v-col xs="12" order-sm="3">
               <v-avatar size="80">
                 <img
                   src="https://cdn.vuetifyjs.com/images/john.jpg"
@@ -91,7 +89,7 @@
         </v-card-text>
       </v-card>
     </v-footer>
-    </div>
+  </div>
 </template>
 
 <script>

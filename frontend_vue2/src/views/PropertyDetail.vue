@@ -7,7 +7,7 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="8">
+          <v-col cols="8" xs="12">
             <v-carousel>
               <v-carousel-item
               v-for="(item,i) in imgs"
@@ -18,7 +18,7 @@
               ></v-carousel-item>
             </v-carousel>
           </v-col>
-          <v-col cols="4">
+          <v-col cols="4" xs="12">
             <v-data-iterator
               :items="items"
               :items-per-page.sync="itemsPerPage"
