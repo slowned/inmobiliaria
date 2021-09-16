@@ -16,6 +16,8 @@
             v-for="icon in icons"
             :key="icon"
             class="mx-4 white--text"
+            :href="links[ icon ]"
+            target="_blank"
             icon
           >
             <v-icon size="24px">
@@ -26,23 +28,56 @@
 
         <v-container>
           <v-row>
-            <v-col>
-              <v-avatar size="100">
+            <v-col xs="12" order-sm="1">
+              <v-avatar size="80">
                 <img
                   src="https://cdn.vuetifyjs.com/images/john.jpg"
                   alt="John"
                 >
               </v-avatar>
-              FIRMA O MATRICULA
+              <v-spacer></v-spacer>
+              <v-list-item-content>
+                <v-list-item-title class="text-h6 mb-1">
+                  Valentin Vidalled
+                </v-list-item-title>
+                <v-list-item-subtitle>Martillero publico</v-list-item-subtitle>
+                <v-list-item-subtitle>Matricula nro: 123456</v-list-item-subtitle>
+              </v-list-item-content>
             </v-col>
-            <v-col>
-              <v-avatar size="100">
+            <v-col xs="12" order="last" order-sm="2">
+             <div class="d-flex flex-column justify-space-between align-center">
+               <v-img
+               src="@/assets/img/logo/fondo_tranparente_recortado.png"
+               max-height="170"
+               max-width="170"
+               ></v-img>
+             </div>
+             <v-divider></v-divider>
+             <v-spacer></v-spacer>
+             <strong>CONTACTO</strong>
+             <v-spacer></v-spacer>
+             (351) 3651121
+             (351) 6533887
+             <v-spacer></v-spacer>
+             inmo@test.com
+             <v-spacer></v-spacer>
+             Jose Gabino Blanco 1527
+            </v-col>
+            <v-col xs="12" order-sm="3">
+              <v-avatar size="80">
                 <img
                   src="https://cdn.vuetifyjs.com/images/john.jpg"
                   alt="John"
                 >
               </v-avatar>
-              FIRMA O MATRICULA
+              <v-spacer></v-spacer>
+              <v-list-item-content>
+                <v-list-item-title class="text-h6 mb-1">
+                  Francisco Camara
+                </v-list-item-title>
+                <v-list-item-subtitle>Martillero publico</v-list-item-subtitle>
+                <v-list-item-subtitle>Matricula nro: 123456</v-list-item-subtitle>
+              </v-list-item-content>
             </v-col>
           </v-row>
         </v-container>
@@ -50,13 +85,11 @@
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
-          telefono: 345-129391
-          <v-spacer> </v-spacer>
-          email: inmo@test.com
+          Copyright 2021
         </v-card-text>
-      </V-CARD>
-    </V-FOOTER>
-    </div>
+      </v-card>
+    </v-footer>
+  </div>
 </template>
 
 <script>
@@ -64,10 +97,18 @@
     data: () => ({
       icons: [
         'mdi-facebook',
-        'mdi-twitter',
-        'mdi-linkedin',
         'mdi-instagram',
       ],
+      links: {
+        'mdi-facebook':'https://www.facebook.com/inmobiliariavidalledcamara',
+        'mdi-instagram':'https://www.instagram.com/vidalledcamara/',
+      },
     }),
   }
 </script>
+
+<style scoped>
+* {
+  font-family: DIN pro;
+}
+</style>

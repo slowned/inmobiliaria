@@ -8,8 +8,8 @@
       <!-- If using vue-router -->
       <router-view></router-view>
     </v-main>
-    <Footer />
-    
+    <Footer id="footer"/>
+
   </v-app>
 </template>
 
@@ -31,4 +31,8 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family:'DIN Pro';
+  src: local('DIN Pro'), require('@/assets/fonts/DINPro.otf') format('truetype');
+}
 </style>

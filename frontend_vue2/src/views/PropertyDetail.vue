@@ -1,8 +1,13 @@
 <template>
-  <v-main>
       <v-container>
         <v-row>
-          <v-col cols="8">
+          <v-col>
+            <h1>Av. Siempre viva 2145</h1>
+            <h3>$ 15.500</h3>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="8" xs="12">
             <v-carousel>
               <v-carousel-item
               v-for="(item,i) in imgs"
@@ -13,7 +18,7 @@
               ></v-carousel-item>
             </v-carousel>
           </v-col>
-          <v-col cols="4">
+          <v-col cols="4" xs="12">
             <v-data-iterator
               :items="items"
               :items-per-page.sync="itemsPerPage"
@@ -37,42 +42,42 @@
                         <v-list-item>
                           <v-list-item-content>Superficie total:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.calories }}
+                            {{ item.total_surface }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Superficie cubierta:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.fat }}
+                            {{ item.surface }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Habitaciones:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.carbs }}
+                            {{ item.bedrooms }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Banios:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.protein }}
+                            {{ item.bathrooms }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Ambientes:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.sodium }}
+                            {{ item.rooms }}
                           </v-list-item-content>
                         </v-list-item>
 
                         <v-list-item>
                           <v-list-item-content>Antiguedad:</v-list-item-content>
                           <v-list-item-content class="align-end">
-                            {{ item.calcium }}
+                            {{ item.antiquity }}
                           </v-list-item-content>
                         </v-list-item>
 
@@ -107,10 +112,12 @@
     </v-row>
   </v-container>
 
-  </v-main>
 </template>
 
+
+
 <script>
+
 export default {
   name: "Contact",
   data () {
@@ -133,13 +140,12 @@ export default {
       items: [
         {
           name: 'Detalles',
-          calories: 159,
-          fat: 6.0,
-          carbs: 24,
-          protein: 4.0,
-          sodium: 87,
-          calcium: '14%',
-          iron: '1%',
+          total_surface: 150,
+          surface: 80,
+          bedrooms: 3,
+          bathrooms: 2,
+          rooms: 6,
+          antiquity: 15,
         },
       ],
     }
@@ -149,46 +155,8 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+* {
+  font-family: DIN pro;
+}
 </style>
-
-
-
-
-
-
-<!-- <template>
-  <div v-if="property">
-    <h3>Detalle de la propiedad</h3>
-    <span>Direccion {{property.address}}</span>
-    <span>Precio ${{property.price}}</span>
-    <span>Descripcion: {{property.description}}</span>
-  </div>
-</template>
-
-<script>
-
-import PropertyService from "@/services/PropertyService.js"
-
-export default {
-  props: ['id'],
-  data() {
-    return {
-      property: null
-    }
-  },
-  created() {
-    PropertyService.getProperty(this.id)
-      .then((response) => {
-        this.property = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  },
-};
-</script>
-
-<style>
-</style> -->

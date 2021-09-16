@@ -17,8 +17,8 @@
       <v-spacer></v-spacer>
       <!-- <v-toolbar-items class="hidden-xs-only"> -->
         <v-btn text rounded to="/" @click="$vuetify.goTo(0)" class="hidden-xs-only">Inicio</v-btn>
-        <v-btn text rounded class="hidden-xs-only">Nosotros</v-btn>
-        <v-btn text rounded @click="$vuetify.goTo(9999)" class="hidden-xs-only">Contacto</v-btn>
+        <v-btn text rounded to="/" @click="$vuetify.goTo('#about')" class="hidden-xs-only">Nosotros</v-btn>
+        <v-btn text rounded @click="$vuetify.goTo('#footer')" class="hidden-xs-only">Contacto</v-btn>
       <!-- </v-toolbar-items> -->
       <div class="hidden-sm-and-up">
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
@@ -26,8 +26,9 @@
     </v-app-bar>
     <v-navigation-drawer
     v-model="drawer"
-    absolute
+    fixed
     temporary
+    color="#BAA460"
     >
     <v-list
     nav
@@ -35,26 +36,26 @@
     >
     <v-list-item-group
     v-model="group"
-    active-class="deep-purple--text text--accent-4"
+    active-class="text--accent-4"
     >
       <v-list-item>
         <v-list-item-icon>
           <v-icon>mdi-home</v-icon>
         </v-list-item-icon>
-        <v-list-item-title>Inicio</v-list-item-title>
+        <v-list-item-title><v-btn text to="/" @click="$vuetify.goTo(0)">Inicio</v-btn></v-list-item-title>
       </v-list-item>
 
       <v-list-item>
         <v-list-item-icon>
           <v-icon>mdi-account</v-icon>
         </v-list-item-icon>
-        <v-list-item-title>Nosotros</v-list-item-title>
+        <v-list-item-title><v-btn text to="/" @click="$vuetify.goTo('#about')">Nosotros</v-btn></v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-list-item-icon>
           <v-icon>mdi-email</v-icon>
         </v-list-item-icon>
-        <v-list-item-title>Contacto</v-list-item-title>
+        <v-list-item-title><v-btn text @click="$vuetify.goTo('#footer')">Contacto</v-btn></v-list-item-title>
       </v-list-item>
     </v-list-item-group>
 </v-list>
@@ -86,3 +87,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.v-btn--active::before {
+  opacity: 0;
+}
+</style>
