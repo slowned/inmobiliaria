@@ -48,7 +48,6 @@ class PropertiesSerializer(ModelSerializer):
         image_validated_data = validated_data.pop('images')
         instance = Property.objects.create(**validated_data)
         image_set_serializer = self.fields['images']
-        import ipdb;ipdb.set_trace()
         # crear imagen y setearle la propiedad
 
 
