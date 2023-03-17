@@ -1,58 +1,69 @@
-from rest_framework.serializers import ModelSerializer
+from io import BytesIO
+from django.core.files import File
+from rest_framework.serializers import ModelSerializer, ImageField
+from PIL import Image
 
 from properties.models import Property, PropertyImages
 
-__all__ = ['PropertiesSerializer']
+__all__ = ['PropertiesSerializer', 'ImagesSerializer']
 
 
 class ImagesSerializer(ModelSerializer):
+    image = ImageField(
+        max_length=None, use_url=True,
+    )
+
     class Meta:
         model = PropertyImages
         fields = ['image']
 
+
 class PropertiesSerializer(ModelSerializer):
-    images = ImagesSerializer()
+    images = ImagesSerializer(many=True, required=False)
 
     class Meta:
         model = Property
         fields = [
             'images',
             'address',
-            'ages',
-            'amount',
-            'bathroom',
-            'bedroom',
-            'covered_area',
-            'coordinates',
-            'description',
-            'garage',
+            'expensas',
+            # 'ages',
+            # 'amount',
+            # 'bathroom',
+            # 'bedroom',
+            # 'covered_area',
+            # 'coordinates',
+            # 'description',
+            # 'garage',
             'home_type',
-            'rooms',
-            'total_surface',
-            'state',
-            'services',
+            # 'rooms',
+            # 'total_surface',
+            # 'state',
+            # 'services',
         ]
 
-    # def create(self, validated_data):
-    #     import ipdb;ipdb.set_trace()
-    #     instance = Property.objects.create(**validated_data)
-    #     PropertyImages.objects.create(image=image, Equipment=instance)
-    #     return instance
-
-    # def to_representation(self, instance):
-    #     representation = super(EquipmentSerializer, self).to_representation(instance)
-    #     representation['assigment'] = AssignmentSerializer(instance.assigment_set.all(), many=True).data
-    #     return representation 
-
     def create(self, validated_data):
-        image_validated_data = validated_data.pop('images')
-        instance = Property.objects.create(**validated_data)
-        image_set_serializer = self.fields['images']
-        # crear imagen y setearle la propiedad
+        images_data = self.context['request'].FILES.getlist('images[]')
 
+        property_instance = Property.objects.create(**validated_data)
 
+        for image_data in images_data:
+            PropertyImages.objects.create(
+                prop=property_instance,
+                image=image_data,
+            )
 
-        for image in image_validated_data:
-            image['prop'] = instance
-        image = image_set_serializer.create(image_validated_data)
-        return instance
+        return property_instance
+
+    # TODO: no se esta usando
+    def make_thumbnail(self, image, size=(300, 200)):
+        img = Image.open(image)
+        img.convert('RGB')
+        img.thumbnail(size)
+
+        thumb_io = BytesIO()
+        img.save(thumb_io, 'JPEG', quality=85)
+
+        thumbnail = File(thumb_io, name=image.name)
+
+        return thumbnail

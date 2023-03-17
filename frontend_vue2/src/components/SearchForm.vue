@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import { YES_NO, HOME_TYPE } from "@/constants.js"
+import { SI_NO, HOME_TYPE } from "@/constants.js"
 
 export default {
   name: 'searchForm',
@@ -94,7 +94,7 @@ export default {
       orderBy: ["Mayor precio", "Menor precio", "Mas amplio en MTS" , "Mas chico en MTS"],
       propertiesType: HOME_TYPE,
       rooms: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      yesNoOptions: YES_NO,
+      yesNoOptions: SI_NO,
       garage: null,
       garden: null,
     }

@@ -24,3 +24,14 @@ class HomeType:
         (PH, 'PH'),
         (DUPLEX, 'Duplex'),
     )
+
+class Services:
+    LUZ = 0
+    GAS_NATURAL = 1
+    CLOACA = 2
+
+    CHOICES = (
+        (LUZ, 'luz'),
+        (GAS_NATURAL, 'gas natual'),
+        (CLOACA, 'clacas'),
+    )

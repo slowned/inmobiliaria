@@ -1,7 +1,44 @@
-from django.db import models
-from properties.constants import StateChoices, HomeType
+from io import BytesIO
+# from PIL import  Image
 
-__all__ = ['Property']
+from django.core.files import File
+from django.db import models
+
+from properties.constants import StateChoices, HomeType, Services
+
+__all__ = ['Property', 'PropertyImages']
+
+
+def compress(image):
+    im = Image.open(image)
+    # create a BytesIO object
+    im_io = BytesIO()
+    # save image to BytesIO object
+    im.save(im_io, 'JPEG', quality=70)
+    # create a django-friendly Files object
+    new_image = File(im_io, name=image.name)
+    return new_image
+
+
+class MyModelImage(models.Model):
+    building = models.ForeignKey(
+        "Property",
+        on_delete=models.CASCADE,
+        related_name="img",
+    )
+    image = models.ForeignKey(
+        "Image",
+        on_delete=models.CASCADE
+    )
+
+
+class Image(models.Model):
+    img = models.ImageField(upload_to="images/")
+
+
+# TODO: usar un path cuando se guarda la imagen
+def property_image_path(instnace, filename):
+    return 'propiedades/{intance.id}/'
 
 
 class PropertyImages(models.Model):
@@ -9,24 +46,12 @@ class PropertyImages(models.Model):
     Reprecent all images for a property.
     """
     image = models.ImageField(
-        upload_to='propiedades', blank=True, null=True,
+        upload_to='propiedades/', blank=True, null=True,
     )
     prop = models.ForeignKey(
         "Property",
         related_name="images",
         on_delete=models.CASCADE,
-    )
-
-
-class Services:
-    LUZ = 0
-    GAS_NATURAL = 1
-    CLOACA = 2
-
-    CHOICES = (
-        (LUZ, 'luz'),
-        (GAS_NATURAL, 'gas natual'),
-        (CLOACA, 'clacas'),
     )
 
 
@@ -36,27 +61,28 @@ class Property(models.Model):
     """
     expensas = models.PositiveSmallIntegerField(null=True, blank=True)
     address = models.CharField(max_length=255, null=True)
-    available = models.BooleanField(default=True)
-    coordinates = models.CharField(max_length=255, blank=True, null=True)  # x,y para google maps
-    description = models.CharField(max_length=255, null=True)
-    services = models.CharField(
-        max_length=255, blank=True, null=True)  # [luz, gas, natural, cochera]
     home_type = models.PositiveSmallIntegerField(
         choices=HomeType.CHOICES,
         default=HomeType.HOUSE,
     )
-    rooms = models.PositiveSmallIntegerField(null=True, default=1)
-    bathroom = models.PositiveSmallIntegerField(null=True, default=1)
-    bedroom = models.PositiveSmallIntegerField(null=True, blank=True)
-    garage = models.BooleanField(default=False)
-    total_surface = models.PositiveSmallIntegerField(null=True, blank=True)
-    covered_area = models.PositiveSmallIntegerField(null=True, blank=True)
-    state = models.PositiveSmallIntegerField(
-        choices=StateChoices.CHOICES,
-        default=StateChoices.VERY_GOOD,
-    )
-    ages = models.PositiveSmallIntegerField(blank=True)
-    amount = models.IntegerField(blank=False)
+    # available = models.BooleanField(default=True)
+    # coordinates = models.CharField(max_length=255, blank=True, null=True)  # x,y para google maps
+    # description = models.CharField(max_length=255, null=True, blank=True)
+    # services = models.CharField(
+    #     max_length=255, blank=True, null=True)  # [luz, gas, natural, cochera]
+    # rooms = models.PositiveSmallIntegerField(null=True, default=1)
+    # bathroom = models.PositiveSmallIntegerField(null=True, default=1)
+    # bedroom = models.PositiveSmallIntegerField(null=True, blank=True)
+    # garage = models.BooleanField(default=False)
+    # total_surface = models.PositiveSmallIntegerField(null=True, blank=True)
+    # covered_area = models.PositiveSmallIntegerField(null=True, blank=True)
+    # state = models.PositiveSmallIntegerField(
+    #     choices=StateChoices.CHOICES,
+    #     default=StateChoices.VERY_GOOD,
+    # )
+    # ages = models.PositiveSmallIntegerField(blank=True)
+    # amount = models.IntegerField(blank=False)
+    # price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
 
     def __srt__(self):
         return f"Propiedad: {self.id}"

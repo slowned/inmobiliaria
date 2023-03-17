@@ -1,4 +1,8 @@
-export const YES_NO = ["Sin patio", "Con patio"];
-export const HOME_TYPE = ['Casa', 'Departamento', 'PH', 'Duplex'];
-// export default YES_NO, HOME_TYPE;
-
+export const HOME_TYPE = ['casa', 'departamento', 'PH', 'duplex'];
+export const HOME_STATES = [
+  'exelente',
+  'my bueno',
+  'bueno',
+  'reparar',
+];
+export const SI_NO = ["SI", "NO"];
