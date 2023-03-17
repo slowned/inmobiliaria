@@ -2,6 +2,7 @@
   <v-container>
     <v-form>
 
+      <!-- TODO: usar prop "multiple" asi se pueden seleccionar muchos archivos de una-->
       <v-row>
         <v-file-input
           label="Fotos"

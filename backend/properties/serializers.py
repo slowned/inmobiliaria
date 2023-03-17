@@ -48,6 +48,7 @@ class PropertiesSerializer(ModelSerializer):
         property_instance = Property.objects.create(**validated_data)
 
         for image_data in images_data:
+            #TODO: usar ImagesSerializer create
             PropertyImages.objects.create(
                 prop=property_instance,
                 image=image_data,
