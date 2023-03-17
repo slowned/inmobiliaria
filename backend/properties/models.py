@@ -1,3 +1,5 @@
+import os
+
 from io import BytesIO
 # from PIL import  Image
 
@@ -36,9 +38,11 @@ class Image(models.Model):
     img = models.ImageField(upload_to="images/")
 
 
-# TODO: usar un path cuando se guarda la imagen
-def property_image_path(instnace, filename):
-    return 'propiedades/{intance.id}/'
+def get_image_path(instance, filename):
+    """
+    generate relative path bases on propoperty id
+    """
+    return os.path.join('propiedades', str(instance.prop.id) + '/' + filename)
 
 
 class PropertyImages(models.Model):
@@ -46,7 +50,7 @@ class PropertyImages(models.Model):
     Reprecent all images for a property.
     """
     image = models.ImageField(
-        upload_to='propiedades/', blank=True, null=True,
+        upload_to=get_image_path, blank=True, null=True,
     )
     prop = models.ForeignKey(
         "Property",
