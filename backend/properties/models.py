@@ -22,22 +22,6 @@ def compress(image):
     return new_image
 
 
-class MyModelImage(models.Model):
-    building = models.ForeignKey(
-        "Property",
-        on_delete=models.CASCADE,
-        related_name="img",
-    )
-    image = models.ForeignKey(
-        "Image",
-        on_delete=models.CASCADE
-    )
-
-
-class Image(models.Model):
-    img = models.ImageField(upload_to="images/")
-
-
 def get_image_path(instance, filename):
     """
     generate relative path bases on propoperty id
@@ -92,3 +76,24 @@ class Property(models.Model):
         return f"Propiedad: {self.id}"
 
     # definir get services spliteados x ,
+
+
+
+
+# CODIGO PARA AGREGAR MULTIPLES IMAGES DEL ADMIN NO SIRVE
+# class MyModelImage(models.Model):
+#     building = models.ForeignKey(
+#         "Property",
+#         on_delete=models.CASCADE,
+#         related_name="img",
+#     )
+#     image = models.ForeignKey(
+#         "Image",
+#         on_delete=models.CASCADE
+#     )
+
+
+# class Image(models.Model):
+#     img = models.ImageField(upload_to="images/")
+
+
