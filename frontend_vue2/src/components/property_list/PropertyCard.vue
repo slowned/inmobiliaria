@@ -7,7 +7,7 @@
         <v-img
           class="white--text align-end"
           height="200px"
-          src="{{property.images[0]}}"
+          :src="property.images[0].image"
         >
         </v-img>
 
@@ -37,6 +37,8 @@
             <v-icon>
               mdi-paper-roll
             </v-icon> 2
+            {{ property.expensas }}
+            {{ property.home_type }}
         </v-card-text>
 
         <v-card-actions>
@@ -54,7 +56,7 @@
 
 <script>
 export default {
-  name: 'propertyCard',
+  name: 'propertyList',
   props: {
     property: Object
   }

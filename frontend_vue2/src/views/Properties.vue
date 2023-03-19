@@ -44,7 +44,7 @@
     <v-row>
         <v-row>
           <v-col cols="12" md="4" sm="6" v-for="property in properties" :key="property.id">
-            <PropertyList :property="property" />
+            <PropertyCard :property="property" />
           </v-col>
         </v-row>
     </v-row>
@@ -53,14 +53,14 @@
 </template>
 
 <script>
-import PropertyList from "@/components/PropertyList.vue";
+import PropertyCard from "@/components/property_list/PropertyCard.vue";
 import SearchForm from "@/components/SearchForm";
 import PropertyService from "@/services/PropertyService.js";
 
 export default {
   name: "Properties",
   components: {
-    PropertyList,
+    PropertyCard,
     SearchForm,
   },
   data() {
