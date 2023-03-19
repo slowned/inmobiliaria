@@ -1,36 +1,36 @@
 from django.contrib import admin
 
-from properties.models import Property, PropertyImages, MyModelImage, Image
+from properties.models import Property, PropertyImages
 
-# __all__ = ['PropertyAdmin', 'ImagesAdmin']
-
-
-# @admin.register(Property)
-# class PropertyAdmin(admin.ModelAdmin):
-#     class Meta:
-#         verbose_name = "Propiedad"
-#         verbose_name_plural = "Propiedades"
+__all__ = ['PropertyAdmin', 'ImagesAdmin']
 
 
-# @admin.register(PropertyImages)
-# class ImagesAdmin(admin.ModelAdmin):
-#     class Meta:
-#         verbose_name = "Imagenes"
+@admin.register(Property)
+class PropertyAdmin(admin.ModelAdmin):
+    class Meta:
+        verbose_name = "Propiedad"
+        verbose_name_plural = "Propiedades"
 
 
-@admin.register(Image)
+@admin.register(PropertyImages)
 class ImagesAdmin(admin.ModelAdmin):
     class Meta:
-        verbose_name = "LAIMAGEN"
+        verbose_name = "Imagenes"
 
 
-class MyModelImageInline(admin.StackedInline):
-    model = MyModelImage
-    extra = 1
+# @admin.register(Image)
+# class ImagesAdmin(admin.ModelAdmin):
+#     class Meta:
+#         verbose_name = "LAIMAGEN"
 
 
-class MyModelAdmin(admin.ModelAdmin):
-    inlines = [MyModelImageInline]
+# class MyModelImageInline(admin.StackedInline):
+#     model = MyModelImage
+#     extra = 1
 
 
-admin.site.register(Property, MyModelAdmin)
+# class MyModelAdmin(admin.ModelAdmin):
+#     inlines = [MyModelImageInline]
+
+
+# admin.site.register(Property, MyModelAdmin)
