@@ -24,6 +24,7 @@ class PropertiesSerializer(ModelSerializer):
     class Meta:
         model = Property
         fields = [
+            'id',
             'images',
             'address',
             'expensas',
