@@ -20,7 +20,7 @@
           <v-text-field v-model="address" label="Direccion"></v-text-field>
         </v-col>
         <v-col>
-          <v-text-field v-model="expensas" label="Expensas"></v-text-field>
+          <v-text-field v-model="expenses" label="Expensas"></v-text-field>
         </v-col>
 
         <v-col>
@@ -100,17 +100,44 @@
 
       <v-btn class="mr-4" @click="submit">Crear</v-btn>
     </v-form>
+    
+    <!--
+    <ModalCreated ref="ModalCreated" :show-modal="false"/>
+    <ModalCreated :show-modal="localShowModal" v-on:update:showModal="localShowModal = $event"/>
+      -->
+
+      <v-dialog
+        transition="dialog-bottom-transition"
+        max-width="600"
+        v-model="dialog"
+      >
+        <v-card >
+          <v-toolbar color="#846D34" dark> NUEVA PROPIEADAD </v-toolbar>
+          <v-card-text> <div class="pa-5"> {{ messages.response }} </div> </v-card-text>
+          <v-card-actions class="justify-end">
+            <v-btn text @click="dialog = false">Cerrar</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+
+
   </v-container>
 </template>
 <script>
 // import { HOME_TYPE, HOME_STATES, SI_NO } from "@/constants.js"
 import { HOME_TYPE } from "@/constants.js"
+//import ModalCreated from "@/components/property_create/ModalCreated.vue"
 import PropertyService from "@/services/PropertyService.js";
 
 export default {
   name: 'createForm',
+  components: {
+    //ModalCreated,
+  },
   data() {
     return {
+      dialog: false,
+      showModal: false,
       homeType: HOME_TYPE,
       /* homeStates: HOME_STATES, */
       /* siNo: SI_NO, */
@@ -118,7 +145,7 @@ export default {
       /* amount: '', */
       /* ages: '', */
       address: '',
-      expensas: '',
+      expenses: '',
       /* bathroom: '', */
       /* bedroom: '', */
       /* coordinates: '', */
@@ -136,6 +163,9 @@ export default {
       /*   'bueno': 2, */
       /*   'reparar': 3, */
       /* } */
+      messages: {
+        response: ''
+      }
     }
   },
   methods: {
@@ -170,7 +200,7 @@ export default {
       }
 
       formData.append("address", this.address);
-      formData.append("expensas", this.expensas);
+      formData.append("expenses", this.expenses);
       formData.append("home_type", this.formatHomeType());
       // formData.append("amount", this.amount);
       // formData.append("ages", this.ages);
@@ -183,33 +213,18 @@ export default {
       // formData.append("state", this.formatHomeState());
       // formData.append("services", this.services);
       return formData
-
-      //return {
-      //  image: this.selectedPhoto, // cambiar a files para manejar multiples imagenes
-      //  amount: this.amount,
-      //  ages: this.ages,
-      //  address: this.address,
-      //  bathroom: this.bathroom,
-      //  bedroom: this.bedroom,
-      //  coordinates: this.coordinates,
-      //  description: this.description,
-      //  garage: this.formatGarage(),
-      //  home_type: this.formatHomeType(),
-      //  rooms: this.rooms,
-      //  total_surface: this.total_surface,
-      //  state: this.formatHomeState(),
-      //  services: this.services,
-      //}
     },
     submit() {
       let params = this.getParams();
 
       PropertyService.createProperty(params)
         .then((response) => {
-          console.log('created', response.status);
+          this.dialog = true;
+          this.messages.response = `La propieadad de la calle: ${response.data.address} se creo con exito.`;
         })
-        .catch((error) => {
-          console.log(error)
+        .catch(() => {
+          this.dialog = true;
+          this.messages.response = 'Error en la creacion de la nueva propiedad.';
         });
     },
   },
