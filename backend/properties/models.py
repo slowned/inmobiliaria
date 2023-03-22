@@ -47,7 +47,7 @@ class Property(models.Model):
     """
     Reprecent a home property.
     """
-    expensas = models.PositiveSmallIntegerField(null=True, blank=True)
+    expenses = models.PositiveSmallIntegerField(null=True, blank=True)
     address = models.CharField(max_length=255, null=True)
     home_type = models.PositiveSmallIntegerField(
         choices=HomeType.CHOICES,

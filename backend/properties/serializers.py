@@ -27,7 +27,7 @@ class PropertiesSerializer(ModelSerializer):
             'id',
             'images',
             'address',
-            'expensas',
+            'expenses',
             # 'ages',
             # 'amount',
             # 'bathroom',
