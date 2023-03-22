@@ -37,8 +37,6 @@
             <v-icon>
               mdi-paper-roll
             </v-icon> 2
-            {{ property.expensas }}
-            {{ property.home_type }}
         </v-card-text>
 
         <v-card-actions>

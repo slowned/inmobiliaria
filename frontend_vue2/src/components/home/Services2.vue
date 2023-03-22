@@ -27,20 +27,13 @@
                   </v-img>
                 </v-card>
               </template>
+
               <template v-slot:default="dialog">
                 <v-card >
-                  <v-toolbar
-                    color="#846D34"
-                    dark
-                  >{{ item.title }}</v-toolbar>
-                  <v-card-text>
-                    <div class="pa-5">{{ item.message }}</div>
-                  </v-card-text>
+                  <v-toolbar color="#846D34" dark> {{ item.title }} </v-toolbar>
+                  <v-card-text> <div class="pa-5"> {{ item.message }} </div> </v-card-text>
                   <v-card-actions class="justify-end">
-                    <v-btn
-                      text
-                      @click="dialog.value = false"
-                    >Cerrar</v-btn>
+                    <v-btn text @click="dialog.value = false">Cerrar</v-btn>
                   </v-card-actions>
                 </v-card>
               </template>
